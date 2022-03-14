@@ -1,0 +1,19 @@
+<h2>Cadastrar Categoria:</h2>
+<hr>
+<form>
+    Nome: <input type="text" name="nomeCategoria" [(ngModel)] = "categoria.nome"> <button type="button" (click)="cadastrar()">Cadastrar</button>
+</form>
+
+<h2>Lista de Categorias:</h2>
+<hr>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+    </tr>
+    <tr *ngFor="let c of categorias">
+        <td>{{c.id}}</td>
+        <td>{{c.nome}}</td>
+        <td><button type="button" (click)="deletar(c.id)">Deletar</button></td>
+    </tr>
+</table>

@@ -1,0 +1,24 @@
+<h2>Lista de Todos Produtos:</h2>
+<hr>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Descricao</th>
+        <th>DataCriacao</th>
+        <th>DataAtualizacao</th>
+        <th>Status</th>
+        <th>Categoria</th>
+    </tr>
+    <tr *ngFor="let p of produtos">
+        <td>{{p.id}}</td>
+        <td>{{p.nome}}</td>
+        <td>{{p.descricao}}</td>
+        <td>{{p.dataCriacao}}</td>
+        <td>{{p.dataAtualizacao}}</td>
+        <td>{{p.status}}</td>
+        <td>{{p.categoria.nome}}</td>
+        <td><button type="button" (click)="ativar(p.id)">Ativar/Desativar</button></td>
+        <td><button type="button" (click)="deletar(p.id)">Deletar</button></td>
+    </tr>
+</table>

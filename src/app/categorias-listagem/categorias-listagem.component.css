@@ -1,0 +1,14 @@
+table {
+    border-collapse: collapse;
+    width: 20%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+button{
+    margin: 0 5px;
+}
